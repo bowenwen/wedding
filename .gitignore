@@ -18,5 +18,8 @@
 
 .byebug_history
 .DS_Store
+desktop.ini
 
 /development.env
+
+/config/local_env.yml
