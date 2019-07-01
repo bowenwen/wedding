@@ -1,0 +1,50 @@
+# Rename this file to local_env.yml
+# Ref: http://railsapps.github.io/rails-environment-variables.html
+# Add account settings and API keys here.
+# This file should be listed in .gitignore to keep your settings secret!
+# Each entry gets set as a local environment variable.
+# This file overrides ENV variables in the Unix shell.
+# For example, setting:
+# GMAIL_USERNAME: 'Your_Gmail_Username'
+# makes 'Your_Gmail_Username' available as ENV['GMAIL_USERNAME']
+
+#### RAILS ENVIRONMENT ####
+RAILS_ENV: 'development'
+
+# Database url string for development
+DATABASE_URL_DEV: 'postgres://myuser:mypass@localhost/somedatabase'
+
+# Database url string for production
+#DATABASE_URL: 'postgres://myuser:mypass@localhost/somedatabase'
+
+
+#### ENVIRONMENT VARIABLES FOR APP ####
+
+# Main #
+# CANONICAL_HOST — your website's domain, e.g. www.mywedding.com
+CANONICAL_HOST: 'localhost'
+# CONTACT_EMAIL — the email address that users can use to contact you, e.g. info@mywedding.com
+CONTACT_EMAIL: 'email@example.com'
+# FROM_EMAIL — the email address that confirmations emails will come from Sending Email
+FROM_EMAIL: 'email@example.com'
+
+# Mailer #
+# GMAIL setting: https://support.google.com/mail/answer/7126229?visit_id=636975155491362892-878162498&hl=en-GB&rd=1
+# There are environment variables that correspond to each smtp_settings key in the ActionMailer config.
+# SMTP_ADDRESS — name of the SMTP server
+SMTP_ADDRESS: 'smtp.gmail.com'
+# SMTP_PORT — port the SMTP server listens on (default 587)
+SMTP_PORT: '465'
+# SMTP_DOMAIN — HELO domain, if required
+# SMTP_USER_NAME — user name for SMTP server
+SMTP_USER_NAME: 'email@example.com'
+# SMTP_PASSWORD — password for SMTP server
+SMTP_PASSWORD: 'examplepassword'
+# SMTP_AUTHENTICATION — authentication type (default plain)
+# SMTP_ENABLE_STARTTLS_AUTO — automatically detect if STARTTLS is enabled and use it if so (default true)
+
+# ReCAPTCHA #
+# If set, the website will use an invisible reCAPTCHA to prevent spam. You can get these from Google reCAPTCHA's admin page. Be sure to choose 'Invisible' for the type.
+# RECAPTCHA_SITE_KEY — the data-sitekey for the Client side integration
+# RECAPTCHA_SECRET_KEY — the secret for the Server side integration
+

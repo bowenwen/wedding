@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 20180804103058) do
 
   add_foreign_key "plus_ones", "guests"
 
-  create_view "attendees",  sql_definition: <<-SQL
+  create_view "attendees", sql_definition: <<-SQL
       SELECT (guests.id)::text AS id,
       guests.first_name,
       guests.last_name,
@@ -101,5 +101,4 @@ ActiveRecord::Schema.define(version: 20180804103058) do
        JOIN guests ON ((plus_ones.guest_id = guests.id)))
     WHERE guests.attending;
   SQL
-
 end

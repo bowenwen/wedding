@@ -1,5 +1,17 @@
 source 'https://rubygems.org'
 
+# gem install bundler -v '1.16.1'
+# bundle install
+# bundle update
+# - set env variables: `config/local_env.yml`
+# - migrate databases, for first time run, change RAILS_ENV as needed
+# bundle exec rails db:create RAILS_ENV=development
+# bundle exec rails db:migrate RAILS_ENV=development
+# bundle exec rails db:seed RAILS_ENV=development
+# - start app, development
+# bundle exec rails server
+# sudo RAILS_ENV=production bundle exec rails server
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
@@ -30,6 +42,7 @@ gem 'rack-canonical-host'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'auto_strip_attributes'
 gem 'scenic'
+gem 'execjs'
 
 group :development, :test do
   gem 'rubocop'
@@ -47,4 +60,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'tzinfo-data'
+  gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 end
