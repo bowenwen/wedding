@@ -44,6 +44,8 @@ gem 'auto_strip_attributes'
 gem 'scenic'
 gem 'execjs'
 
+gem "nokogiri", ">= 1.10.4"
+
 group :development, :test do
   gem 'rubocop'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
