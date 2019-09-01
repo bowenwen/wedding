@@ -22,4 +22,5 @@ desktop.ini
 
 /development.env
 
-/config/local_env.yml
+config/local_env.yml
+app/assets/images/arh/
