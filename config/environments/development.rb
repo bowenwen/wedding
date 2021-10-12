@@ -32,8 +32,10 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  # # Don't care if the mailer can't send.
+  # config.action_mailer.raise_delivery_errors = false
+  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
@@ -63,5 +65,18 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = {
     host: ENV['CANONICAL_HOST'], port: 3000
+  }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  
+  config.action_mailer.smtp_settings = {
+    address:              ENV['SMTP_ADDRESS'],
+    port:                 (ENV['SMTP_PORT'] || 587).to_i,
+    domain:               ENV['SMTP_DOMAIN'],
+    user_name:            ENV['SMTP_USER_NAME'],
+    password:             ENV['SMTP_PASSWORD'],
+    authentication:       ENV['SMTP_AUTHENTICATION'] || 'plain',
+    enable_starttls_auto: ENV['SMTP_ENABLE_STARTTLS_AUTO'] || 'true'
   }
 end
