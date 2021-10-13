@@ -24,7 +24,7 @@ $body-color: rgba(28, 13, 10, 0.7);
 $headings-color: rgba(28, 13, 10, 0.7);
 
 $theme-colors: (
-  "primary": #ff745c
+  "primary": #2f33ff
 );
 
 $enable-rounded: false;
@@ -55,9 +55,41 @@ h2 {
   }
 }
 
+// rainbow style sources
+// https://codepen.io/nohoid/pen/kIfto
+// https://css-tricks.com/snippets/css/css-repeating-gradients/
+@-webkit-keyframes rainbow {
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
+
 .wedding-cta-btn {
   letter-spacing: 2px;
   padding: 0.75rem 1.5rem;
+  background: linear-gradient(125deg, indigo, blue, green, orange, red);
+  background-size: 1800% 1800%;
+  -webkit-animation: rainbow 90s ease infinite;
+  -z-animation: rainbow 90s ease infinite;
+  -o-animation: rainbow 90s ease infinite;
+  animation: rainbow 90s ease infinite;
+  border: none;
+  // background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
 }
 
 .wedding-required {
