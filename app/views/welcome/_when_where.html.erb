@@ -11,7 +11,7 @@
           <%= render partial: 'calendar_svg' %>
         <%- end %></h2>
         <p>
-          <strong>12:30pm &ndash; late</strong><br>
+          <strong>4:00pm &ndash; 10:00pm</strong><br>
           <%= t :wedding_date %><br>
           &nbsp;<br>
         </p>
@@ -25,7 +25,7 @@
           <%= render partial: 'wedding_address' %>
         </p>
         <p>
-          <%= link_to 'Google Maps', @google_maps_url %>
+          <%= link_to 'Google Maps', @google_maps_venue_url, target: :_blank, rel: 'noopener' %>
         </p>
       </div>
     </div>
