@@ -14,6 +14,11 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Arvo:400');
 
+@font-face {
+  font-family: 'GreatVibes';
+  src: asset-url("Great_Vibes/GreatVibes-Regular.ttf")
+}
+
 $font-family-sans-serif: Montserrat, Helvetica, Arial, sans-serif;
 $font-family-serif: Arvo, Georgia, "Times New Roman", Times, serif;
 
@@ -34,10 +39,14 @@ $enable-rounded: false;
 @import "welcome";
 
 h1 {
-  font-size: 60px;
+  font-family: GreatVibes;
   font-weight: 700;
+  font-size: 80px;
+  font-weight: 400; //400 for normal, 700 bold, 
+  letter-spacing: 0.0833333em;
   letter-spacing: 0.0833333em;
   text-transform: uppercase;
+  text-transform: none;
 }
 
 h2 {
