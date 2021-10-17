@@ -5,7 +5,12 @@
       <%= t :wedding_date %>, <%= t :wedding_location %>
     </p>
     <p>
-      <%= link_to 'RSVP TODAY!', new_guest_path, class: 'btn btn-primary wedding-cta-btn' %>
+      <%= link_to 'RSVP HERE', new_guest_path, :title => 'Click here to RSVP!', "data-placement" => "bottom", 'data-toggle' => 'tooltip', class: 'btn btn-primary wedding-cta-btn' %>
     </p>
   </div>
+  <style>
+    .jumbotron {
+        margin-bottom: 0px!important;
+    }
+  </style>
 </section>

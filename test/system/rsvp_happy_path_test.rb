@@ -5,7 +5,7 @@ require 'application_system_test_case'
 class RsvpHappyPathTest < ApplicationSystemTestCase
   test 'RSVP attending' do
     visit root_url
-    click_link 'RSVP TODAY!', match: :first
+    click_link 'RSVP HERE', match: :first
 
     fill_in 'Email', with: 'test@example.com'
     click_on 'Continue'
@@ -69,7 +69,7 @@ class RsvpHappyPathTest < ApplicationSystemTestCase
 
   test 'RSVP not attending' do
     visit root_url
-    click_link 'RSVP TODAY!', match: :first
+    click_link 'RSVP HERE', match: :first
 
     fill_in 'Email', with: 'test@example.com'
     click_on 'Continue'
@@ -98,7 +98,7 @@ class RsvpHappyPathTest < ApplicationSystemTestCase
 
   test 'Sends RSVP update email' do
     visit root_url
-    click_link 'RSVP TODAY!', match: :first
+    click_link 'RSVP HERE', match: :first
 
     fill_in 'Email', with: 'test@example.com'
     click_on 'Continue'
@@ -113,7 +113,7 @@ class RsvpHappyPathTest < ApplicationSystemTestCase
     assert_equal 1, ActionMailer::Base.deliveries.size
 
     visit root_url
-    click_link 'RSVP TODAY!', match: :first
+    click_link 'RSVP HERE', match: :first
 
     fill_in 'Email', with: 'test@example.com'
     click_on 'Continue'
