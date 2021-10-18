@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2018_08_04_103058) do
     t.datetime "updated_at", null: false
     t.string "token", null: false
     t.boolean "attending"
+    t.string "meal"
     t.string "diet"
     t.string "songs"
     t.string "notes"
@@ -64,6 +65,7 @@ ActiveRecord::Schema.define(version: 2018_08_04_103058) do
 
   create_table "plus_ones", force: :cascade do |t|
     t.bigint "guest_id"
+    t.string "meal"
     t.string "diet"
     t.boolean "child"
     t.datetime "created_at", null: false
@@ -80,6 +82,7 @@ ActiveRecord::Schema.define(version: 2018_08_04_103058) do
       guests.first_name,
       guests.last_name,
       guests.email,
+      guests.meal,
       guests.diet,
       guests.songs,
       guests.notes,
@@ -92,6 +95,7 @@ ActiveRecord::Schema.define(version: 2018_08_04_103058) do
       plus_ones.first_name,
       plus_ones.last_name,
       NULL::citext AS email,
+      plus_ones.meal,
       plus_ones.diet,
       NULL::character varying AS songs,
       NULL::character varying AS notes,

@@ -5,5 +5,6 @@
 #
 class Attendee < ApplicationRecord
   scope :diet?, -> { where.not(diet: nil) }
+  scope :meal?, -> { where.not(meal: nil) }
   scope :child?, -> { where(child: true) }
 end

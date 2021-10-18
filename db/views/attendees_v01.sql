@@ -1,6 +1,6 @@
 SELECT
   id::text,
-  first_name, last_name, email,
+  first_name, last_name, email, meal,
   diet, songs, notes, NULL as child,
   updated_at
 FROM guests
@@ -11,6 +11,7 @@ UNION ALL
 SELECT
   guest_id || '-' || plus_ones.id AS id,
   plus_ones.first_name, plus_ones.last_name, NULL AS email,
+  plus_ones.meal,
   plus_ones.diet, NULL as songs, NULL as notes, plus_ones.child,
   plus_ones.updated_at
 FROM plus_ones

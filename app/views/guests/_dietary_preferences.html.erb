@@ -1,9 +1,32 @@
 <div class="form-group row">
+  <div class="offset-md-3 col-md-9">
+  <%= form.label :meal, 'Meal Selection', class: 'col-form-label' %>
+  </div>
+  <div class="offset-md-3 col-md-9">
+    <div class="form-check form-check-inline">
+      <%= form.radio_button :meal, 'Chicken', checked: true, id: "#{id_stem}_meal_chicken", class: 'form-check-input' %>
+      <%= form.label :meal, 'Chicken', value: 'Chicken', class: 'form-check-label' %>
+    </div>
+    <div class="form-check form-check-inline">
+      <%= form.radio_button :meal, 'Fish', id: "#{id_stem}_meal_fish", class: 'form-check-input' %>
+      <%= form.label :meal, 'Fish', value: 'Fish', class: 'form-check-label' %>
+    </div>
+    <div class="form-check form-check-inline">
+      <%= form.radio_button :meal, 'Vegan', id: "#{id_stem}_meal_vegan", class: 'form-check-input' %>
+      <%= form.label :meal, 'Vegan', value: 'Vegan', class: 'form-check-label' %>
+    </div>
+    <div class="form-check form-check-inline">
+      <%= form.radio_button :meal, 'Kids', id: "#{id_stem}_meal_kids", class: 'form-check-input', hidden: true %>
+      <%= form.label :meal, 'Kids', value: 'Kids', class: 'form-check-label', hidden: true %>
+    </div>
+  </div>
+</div>
+<div class="form-group row">
   <div class="col-md-3">
-    <%= form.label :diet, 'Dietary Preferences', class: 'col-form-label' %>
+    <%= form.label :diet, 'Dietary Restrictions', class: 'col-form-label' %>
   </div>
   <div class="col-md-9">
     <%= form.text_area :diet, id: "#{id_stem}_diet", class: 'form-control' %>
-    <small class="form-text text-muted">For example, vegan, vegetarian, gluten free, and any allergies or intolerances.</small>
+    <small class="form-text text-muted">Please indicate any dietary restrictions.</small>
   </div>
 </div>

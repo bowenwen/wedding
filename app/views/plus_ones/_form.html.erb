@@ -1,4 +1,4 @@
-<%= form_with(model: [@guest, @plus_one], local: true) do |form| %>
+<%= form_with(model: [@guest, @plus_one], local: true, id: 'plus_ones-edit-form') do |form| %>
   <div class="row">
     <div class="col-md-12">
       <%= errors_for(@plus_one) %>
@@ -7,13 +7,15 @@
 
   <%= render partial: 'guests/name', locals: { form: form, id_stem: 'plus_one' } %>
 
-  <%= render partial: 'guests/dietary_preferences', locals: { form: form, id_stem: 'plus_one' } %>
+  <div class="guest-meal-option">
+    <%= render partial: 'guests/dietary_preferences', locals: { form: form, id_stem: 'plus_one' } %>
+  </div>
 
   <div class="form-group row">
     <div class="offset-md-3 col-md-9">
       <div class="form-check form-check-inline">
         <%= form.check_box :child, id: 'plus_one_child', class: 'form-check-input' %>
-        <%= form.label :child, 'Child (12 or under)', class: 'form-check-label' %>
+        <%= form.label :child, 'Kids meal for 12 or under', class: 'form-check-label' %>
       </div>
     </div>
   </div>

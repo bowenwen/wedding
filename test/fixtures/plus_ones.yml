@@ -4,12 +4,14 @@ one:
   guest: one
   first_name: Plus
   last_name: One
-  diet: Level 1 Vegan
+  meal: Fish
+  diet: Authing goes
   child: false
 
 two:
   guest: one
   first_name: Plus
   last_name: Two
+  meal: Vegan
   diet: Level 2 Vegan
   child: false

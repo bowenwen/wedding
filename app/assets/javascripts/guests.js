@@ -7,6 +7,7 @@ $(function () {
   function toggleAttendingOnly () {
     var attending = $(radioMatcher + ':checked').val()
     $('.guest-attending-only textarea').attr('disabled', attending !== 'true')
+    $('.guest-attending-only input').attr('disabled', attending !== 'true')
   }
   radioButtons.on('change', toggleAttendingOnly)
   toggleAttendingOnly()

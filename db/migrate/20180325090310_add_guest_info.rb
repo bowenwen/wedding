@@ -10,6 +10,7 @@ class AddGuestInfo < ActiveRecord::Migration[5.1]
 
       t.string :token, null: false
       t.boolean :attending
+      t.string  :meal
       t.integer :diet
       t.string :other_diet
     end

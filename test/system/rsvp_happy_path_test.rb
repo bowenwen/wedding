@@ -16,7 +16,8 @@ class RsvpHappyPathTest < ApplicationSystemTestCase
     fill_in 'First Name', with: 'Test'
     fill_in 'Last Name', with: 'User'
     choose 'Yes'
-    fill_in 'Dietary Preferences', with: 'Level 5 Vegan'
+    choose 'Vegan'
+    fill_in 'Dietary Restrictions', with: 'Level 5 Vegan'
     fill_in 'Song Suggestions', with: 'Mozart'
     click_on 'Continue'
 
@@ -27,7 +28,8 @@ class RsvpHappyPathTest < ApplicationSystemTestCase
 
     fill_in 'First Name', with: 'Test Plus'
     fill_in 'Last Name', with: 'One Name'
-    fill_in 'Dietary Preferences', with: 'Vegetarian'
+    choose 'Chicken'
+    fill_in 'Dietary Preferences', with: 'Anything goes'
     check 'Child'
     click_on 'Add Plus One'
 
@@ -37,7 +39,8 @@ class RsvpHappyPathTest < ApplicationSystemTestCase
 
     fill_in 'First Name', with: 'Test Plus'
     fill_in 'Last Name', with: 'Two Name'
-    fill_in 'Dietary Preferences', with: 'Pescatarian'
+    choose 'Fish'
+    fill_in 'Dietary Restrictions', with: 'Pescatarian'
     check 'Child'
     click_on 'Add Plus One'
 

@@ -2,6 +2,7 @@
 
 ActiveAdmin.register Attendee do
   scope :child?
+  scope :meal?
   scope :diet?
 
   controller do
@@ -14,6 +15,7 @@ ActiveAdmin.register Attendee do
     column :first_name
     column :last_name
     column :email
+    column :meal
     column :diet
     column :notes
     column :child

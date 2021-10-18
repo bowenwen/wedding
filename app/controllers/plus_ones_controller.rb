@@ -50,6 +50,6 @@ class PlusOnesController < ApplicationController
   private
 
   def plus_one_params
-    params.require(:plus_one).permit(:first_name, :last_name, :diet, :child)
+    params.require(:plus_one).permit(:first_name, :last_name, :meal, :diet, :child)
   end
 end

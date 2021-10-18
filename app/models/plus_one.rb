@@ -6,7 +6,7 @@
 class PlusOne < ApplicationRecord
   belongs_to :guest
 
-  auto_strip_attributes :first_name, :last_name, :diet
+  auto_strip_attributes :first_name, :last_name, :meal, :diet
 
   validates :first_name, presence: true
   validates :first_name, length: { maximum: 1024 }
@@ -17,5 +17,6 @@ class PlusOne < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
+  validates :meal, length: { maximum: 8192 }
   validates :diet, length: { maximum: 8192 }
 end

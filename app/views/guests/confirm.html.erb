@@ -28,7 +28,19 @@
           </div>
           <div class="row">
             <div class="col-md-4">
-              Dietary Preferences
+              Meal Selection
+            </div>
+            <div class="col-md-8">
+              <% if @guest.meal.present? %>
+                <pre><%= @guest.meal %></pre>
+              <% else %>
+                <p>(None)</p>
+              <% end %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              Dietary Restrictions
             </div>
             <div class="col-md-8">
               <% if @guest.diet.present? %>

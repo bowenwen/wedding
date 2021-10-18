@@ -27,7 +27,7 @@
 
       <div class="form-group row">
         <div class="offset-md-3 col-md-9">
-          <p><strong>Will you be joining us?</strong></p>
+          <p><strong>Will you be joining us? </strong><span class="wedding-required">*</span></p>
           <div class="form-check form-check-inline">
             <%= form.radio_button :attending, 'true', checked: true, id: 'guest_attending_true', class: 'form-check-input' %>
             <%= form.label :attending, 'Yes', value: 'true', class: 'form-check-label' %>
@@ -40,17 +40,17 @@
       </div>
 
       <div class="guest-attending-only">
-      <%= render partial: 'dietary_preferences', locals: { form: form, id_stem: 'guest' } %>
-
-      <div class="form-group row">
-        <div class="col-md-3">
-          <%= form.label :songs, 'Song Suggestions', class: 'col-form-label' %>
+        <%= render partial: 'dietary_preferences', locals: { form: form, id_stem: 'guest' } %>
+        
+        <div class="form-group row">
+          <div class="col-md-3">
+            <%= form.label :songs, 'Song Suggestions', class: 'col-form-label' %>
+          </div>
+          <div class="col-md-9">
+            <%= form.text_area :songs, id: 'guest_songs', class: 'form-control' %>
+            <small class="form-text text-muted">We're crowd sourcing our playlist! Choose some songs you'd like to hear.</small>
+          </div>
         </div>
-        <div class="col-md-9">
-          <%= form.text_area :songs, id: 'guest_songs', class: 'form-control' %>
-          <small class="form-text text-muted">We're crowd sourcing our playlist! Choose some songs you'd like to hear.</small>
-        </div>
-      </div>
       </div>
 
       <div class="row guests-buttons">

@@ -5,6 +5,7 @@ class CreatePlusOnes < ActiveRecord::Migration[5.1]
     create_table :plus_ones do |t|
       t.references :guest, foreign_key: true
       t.string :name
+      t.string :meal
       t.integer :diet
       t.string :other_diet
       t.boolean :child
