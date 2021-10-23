@@ -15,7 +15,8 @@
           <%= t :wedding_date %><br>
           &nbsp;<br>
         </p>
-        <p><%= link_to 'Add to Calendar', 'wedding.ics' %></p>
+        <p>Add to <%= link_to 'Outlook Calendar', 'wedding.ics' %> or <br>
+        <%= link_to 'Google Calendar', 'https://calendar.google.com/event?action=TEMPLATE&tmeid=XzY4bzM0YzloNjBvamVsMWk2OG9qZ2QxamI4bWoyZTloNmNvMzBjMWs3MHNrMHJiMWU5cW04cnJrNXBobXVyOCBocGtzNnY0Zjc3OHUwcmFxMXVyajY3djJjNEBn&tmsrc=hpks6v4f778u0raq1urj67v2c4%40group.calendar.google.com', target: :_blank, rel: 'noopener' %></p>
       </div>
       <div class="col-md-6 text-center">
         <h2><%= link_to @google_maps_url do -%>
