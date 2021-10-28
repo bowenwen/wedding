@@ -1,21 +1,29 @@
 <p><%= @guest.email_safe_salutation %></p>
 
 <% if @guest.attending %>
-<p>We look forward to seeing you!</p>
-<p>The address is:</p>
-<address><%= render partial: 'application/wedding_address' %></address>
+
+<p>We look forward to seeing you on <strong><%= t :wedding_date %>!</strong> Please arrive at <strong>4:00pm</strong>. The ceremony starts at 4:30pm sharp! This is the address of the venue:<br>
+<address><%= render partial: 'application/wedding_address' %></address></p>
+
+<% host_url=ENV['CANONICAL_HOST'] %>
+<% wedding_ics_url="#{host_url}/wedding.ics" %>
+
+<p>Add to your own calendar: <%= link_to 'Outlook', wedding_ics_url %> or <%= link_to 'Google Calendar', 'https://calendar.google.com/event?action=TEMPLATE&tmeid=XzY4bzM0YzloNjBvamVsMWk2OG9qZ2QxamI4bWoyZTloNmNvMzBjMWs3MHNrMHJiMWU5cW04cnJrNXBobXVyOCBocGtzNnY0Zjc3OHUwcmFxMXVyajY3djJjNEBn&tmsrc=hpks6v4f778u0raq1urj67v2c4%40group.calendar.google.com', target: :_blank, rel: 'noopener' %>.</p>
 
 <h3>Your RSVP</h3>
-<p>If you would like to view or update your RSVP, you can use the following link to get back to it:</p>
+<p>If you would like to view or update your RSVP (including meal selections), you can use the following link:</p>
 <p><%= link_to guest_url(@guest), guest_url(@guest) %></p>
 
 <h3>Questions and answers</h3>
 <p>Please check <%= link_to 'our wedding website', root_url %> for more information, or you can reply to this email.</p>
+
 <% else %>
+
 <p>We're sorry to hear you can't make it. If you change your mind, you can update your RSVP with the link below:</p>
 <p><%= link_to guest_url(@guest), guest_url(@guest) %></p>
 <p>We hope to see you another time!</p>
+
 <% end %>
 
-<p>&nbsp;</p>
-<p><%= t :wedding_couple_names %></p>
+<p>Best regards,<br>
+<%= t :wedding_couple_names %></p>
