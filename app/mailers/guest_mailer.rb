@@ -5,6 +5,7 @@ class GuestMailer < ApplicationMailer
 
   def confirmation_email(guest)
     @guest = guest
+    attachments['invite.ics'] = { mime_type: 'application/ics', content: File.read("public/wedding.ics") }
     mail(
       to: guest.name_with_email,
       subject: "#{I18n.t(:wedding_name)}: RSVP Confirmation"
