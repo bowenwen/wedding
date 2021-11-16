@@ -22,12 +22,10 @@ COPY --chown=app:app Gemfile Gemfile.lock $HOME/wedding/
 WORKDIR $HOME/wedding
 RUN bundle
 
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
+
 COPY --chown=app:app . $HOME/wedding/
 
 # ENV RAILS_ENV=production
 # ENV SECRET_KEY_BASE="enter_your_secret"
 # RUN bundle exec rake assets:precompile
-
-# ENTRYPOINT ["bundle", "exec", "rails", "server"]
-# CMD ["-b", "0.0.0.0"]
-CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
