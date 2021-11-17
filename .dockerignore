@@ -7,3 +7,7 @@ tmp/*
 
 # Ignore extras
 docs/*
+
+# Secrets
+production.env
+docker-compose.prod.yml
