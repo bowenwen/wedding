@@ -72,8 +72,8 @@ cd wedding
 cp development.env.template development.env
 docker-compose build
 docker-compose up -d db
-docker-compose run --rm web bash -lc 'bin/rails db:create db:migrate'
-docker-compose run --rm web bash -lc 'bin/rails db:seed'
+docker-compose run --rm web /bin/sh -lc 'bin/rails db:create db:migrate'
+docker-compose run --rm web /bin/sh -lc 'bin/rails db:seed'
 ```
 
 Watch the output of `db:seed` for the default admin credentials:
@@ -103,7 +103,7 @@ docker-compose exec db psql wedding_development postgres
 To get a shell:
 
 ```
-docker-compose exec web bash
+docker-compose exec web /bin/sh
 ```
 
 Once you have a shell in the container, you can run rails commands as normal.
