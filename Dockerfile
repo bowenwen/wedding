@@ -1,19 +1,29 @@
-# FROM ruby:2.7.1
-# FROM ruby:2.7.1-buster
-FROM ruby:2.7.4-slim-buster
+# base with ruby and nodejs step
+FROM ruby:2.7.1-alpine3.10 AS base
 
-RUN apt-get update -qq &&\
-  apt-get install -y apt-utils &&\
-  apt-get install -y curl &&\
-  apt-get install -y shared-mime-info
+RUN apk add --repository https://dl-cdn.alpinelinux.org/alpine/v3.10/main/ --no-cache \
+    "nodejs<12" \
+    "nodejs-npm<12" \
+    yarn
 
-RUN DEBIAN_FRONTEND=noninteractive &&\
-  apt-get update -qq &&\
-  curl -sL https://deb.nodesource.com/setup_10.x | bash - &&\
-  apt-get install -y build-essential libpq-dev nodejs &&\
-  useradd --user-group --create-home --shell /bin/false app
+RUN set -eux; \
+	apk add --no-cache \
+		tzdata \
+		postgresql-dev \
+	;
 
-RUN npm install --global yarn
+RUN addgroup -g 1000 app \
+    && adduser -u 1000 --ingroup app --shell /bin/false --disabled-password --home /home/app app 
+
+
+# builder with dev tools
+FROM base AS builder
+
+RUN set -eux; \
+	apk add --no-cache \
+		shared-mime-info \
+		build-base \
+	;
 
 ENV HOME=/home/app
 USER app
@@ -21,6 +31,16 @@ USER app
 COPY --chown=app:app Gemfile Gemfile.lock $HOME/wedding/
 WORKDIR $HOME/wedding
 RUN bundle
+
+
+# final image from base with builder binary
+FROM base
+
+ENV HOME=/home/app
+USER app
+WORKDIR $HOME/wedding
+
+COPY --from=builder /usr/local/bundle/ /usr/local/bundle/
 
 CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
 
