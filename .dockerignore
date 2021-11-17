@@ -1,0 +1,9 @@
+# Ignore version control data
+.git/*
+
+# Ignore all logfiles and tempfiles.
+log/*
+tmp/*
+
+# Ignore extras
+docs/*
