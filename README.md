@@ -1,6 +1,6 @@
 # Rails App for Weddings and Similar Events
 
-![CI status](https://github.com/jdleesmiller/wedding/workflows/CI/badge.svg)
+![CI status](https://github.com/bowenwen/wedding/workflows/CI/badge.svg)
 
 So you're getting married :tada:
 
