@@ -4,9 +4,9 @@ services:
   web:
     volumes:
       - .:/home/app/wedding
-      - web_bundle:/usr/local/bundle
+      # - web_bundle:/usr/local/bundle
     env_file:
       - development.env
 
-volumes:
-  web_bundle:
+# volumes:
+#   web_bundle:
