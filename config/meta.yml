@@ -1,0 +1,6 @@
+# source: https://www.lewagon.com/blog/setup-meta-tags-rails
+
+# meta_product_name: "Product Name"
+meta_title: "David & Bo's Wedding"
+meta_description: "Join us on August 28, 2022 for our wedding ceremony and reception."
+meta_image: "thumbnail.png" # should exist in `app/assets/images/`

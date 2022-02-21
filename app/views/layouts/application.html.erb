@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%# define metadata %>
     <title><%= t :wedding_name %></title>
+    <meta name="description" content="<%= meta_description %>">
+    <%# guide for meta property: https://www.lewagon.com/blog/setup-meta-tags-rails %>
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= t :wedding_name %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= ENV['CANONICAL_HOST'] %>" />
+    <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= t :wedding_name %>" />
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
