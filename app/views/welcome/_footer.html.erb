@@ -2,7 +2,8 @@
   <div class="container-fluid">
     <div class="row">
       <div id="welcome-index-footer-cta" class="col-md-12 text-center">
-      <%= link_to 'RSVP HERE', new_guest_path, :title => 'Click here to RSVP!', "data-placement" => "bottom", 'data-toggle' => 'tooltip', class: 'btn btn-primary wedding-cta-btn' %>
+      <!-- <%= link_to 'RSVP HERE', new_guest_path, :title => 'Click here to RSVP!', "data-placement" => "bottom", 'data-toggle' => 'tooltip', class: 'btn btn-primary wedding-cta-btn' %> -->
+      <%= button_to 'RSVP CLOSED' , "", :disabled => true, :title => 'RSVP has closed.', "data-placement" => "bottom", 'data-toggle' => 'tooltip', class: 'btn btn-primary wedding-cta-btn' %>
       </div>
     </div>
     <div class="row">
