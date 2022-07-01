@@ -20,3 +20,6 @@
 .DS_Store
 
 /development.env
+
+# Ignore all images
+app/assets/images/*
