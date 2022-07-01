@@ -84,6 +84,33 @@
   }
 }
 
+#welcome-index-recommendations-leader {
+  background: linear-gradient(rgba(28, 13, 10, 0.4), rgba(28, 13, 10, 0.6)),
+    image-url("rec.jpg") center center no-repeat;
+  background-size: cover;
+  margin-top: 5 * $spacer;
+
+  * {
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  h1 {
+    padding: 3 * $spacer 0;
+  }
+}
+
+#welcome-index-recommendations {
+  h1 {
+    padding: 3 * $spacer 0;
+  }
+
+  h2 {
+    padding-top: 3 * $spacer;
+    padding-bottom: $spacer;
+    text-align: center;
+  }
+}
+
 #welcome-index-footer {
   background-color: #e3e9fa;
   margin-top: 5 * $spacer;
