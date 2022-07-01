@@ -25,6 +25,8 @@
 }
 
 #welcome-index-when-where {
+  margin-top: 2.5 * $spacer;
+
   h1 {
     padding: 3 * $spacer 0;
   }
@@ -34,7 +36,7 @@
   background: linear-gradient(rgba(28, 13, 10, 0.4), rgba(28, 13, 10, 0.6)),
     image-url("venue.jpg") center center no-repeat;
   background-size: cover;
-  margin-top: 5 * $spacer;
+  margin-top: 2.5 * $spacer;
 
   * {
     color: rgba(255, 255, 255, 0.95);
@@ -61,7 +63,7 @@
   background: linear-gradient(rgba(28, 13, 10, 0.4), rgba(28, 13, 10, 0.6)),
     image-url("plan.jpg") center 40% no-repeat;
   background-size: cover;
-  margin-top: 5 * $spacer;
+  margin-top: 2.5 * $spacer;
 
   * {
     color: rgba(255, 255, 255, 0.95);
@@ -88,7 +90,7 @@
   background: linear-gradient(rgba(28, 13, 10, 0.4), rgba(28, 13, 10, 0.6)),
     image-url("rec.jpg") center center no-repeat;
   background-size: cover;
-  margin-top: 5 * $spacer;
+  margin-top: 2.5 * $spacer;
 
   * {
     color: rgba(255, 255, 255, 0.95);
@@ -115,7 +117,7 @@
   background: linear-gradient(rgba(28, 13, 10, 0.4), rgba(28, 13, 10, 0.6)),
     image-url("rsvp.jpg") center 35% no-repeat;
   background-size: cover;
-  margin-top: 5 * $spacer;
+  margin-top: 2.5 * $spacer;
 
   * {
     color: rgba(255, 255, 255, 0.95);
@@ -140,7 +142,7 @@
 
 #welcome-index-footer {
   background-color: #e3e9fa;
-  margin-top: 5 * $spacer;
+  margin-top: 2.5 * $spacer;
 
   #welcome-index-footer-cta {
     padding-top: 8 * $spacer;
