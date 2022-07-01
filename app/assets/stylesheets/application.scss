@@ -10,8 +10,11 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *
+ *= require blueimp-gallery-all
+ *
  */
-
+ 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Arvo:400');
 
 @font-face {

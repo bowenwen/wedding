@@ -32,6 +32,7 @@ gem 'jquery-rails'
 gem 'rack-canonical-host'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'scenic'
+gem 'blueimp-gallery'
 
 group :development, :test do
   gem 'rubocop'

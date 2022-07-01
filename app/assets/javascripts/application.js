@@ -17,3 +17,5 @@
 
 //= require_tree .
 //= stub active_admin
+
+//= require blueimp-gallery-all

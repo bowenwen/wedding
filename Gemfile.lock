@@ -65,6 +65,8 @@ GEM
       execjs
     bcrypt (3.1.13)
     bindex (0.5.0)
+    blueimp-gallery (2.11.0.1)
+      railties (>= 3.1.0)
     bootstrap (4.3.1)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
@@ -285,6 +287,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   auto_strip_attributes
+  blueimp-gallery
   bootstrap
   byebug
   capybara (~> 2.13)
