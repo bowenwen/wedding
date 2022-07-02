@@ -138,6 +138,41 @@
     padding-bottom: $spacer;
     text-align: center;
   }
+
+  // edit div for gallery
+  div.gallery {
+    display: inline-block;
+    width: 100%;
+    color: black;
+    font-size: 0;
+    text-align: left;
+  }
+
+  // specify responsive behavior for .gallery img
+  .gallery img {
+    height: 10%;  // 10 images per line
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #welcome-index-moments {
+    // specify responsive behavior for .gallery img
+    .gallery img {
+      height: 12.5%;  // 8 images per line
+      width: 12.5%;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  #welcome-index-moments {
+    .gallery img {
+      // specify responsive behavior for .gallery img
+      height: 20%;  // 5 images per line
+      width: 20%;
+    }
+  }
 }
 
 #welcome-index-footer {
