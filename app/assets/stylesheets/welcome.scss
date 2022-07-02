@@ -139,6 +139,26 @@
     text-align: center;
   }
 
+  // edit title text for gallery
+  .blueimp-gallery-controls h3 {
+    // text-shadow: 1px 1px 2px black, 2px 2px 4px black;
+    // margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    text-align: center;
+    // color: white;
+    // line-height: .8;
+    // font-size: 55px;
+  }
+
+  .blueimp-gallery > .close {
+    padding-top: 40px;
+  }
+
   // edit div for gallery
   div.gallery {
     display: inline-block;
