@@ -23,3 +23,6 @@
 
 # Ignore all images
 app/assets/images/*
+
+# Ignore precomfiled assets
+public/assets/*
