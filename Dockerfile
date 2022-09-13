@@ -1,5 +1,5 @@
 # base with ruby and nodejs step
-FROM ruby:2.7.1-alpine3.12 AS base
+FROM ruby:2.7.1-alpine3.10 AS base
 
 RUN apk add --repository https://dl-cdn.alpinelinux.org/alpine/v3.10/main/ --no-cache \
     "nodejs<12" \
